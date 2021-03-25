@@ -1,13 +1,12 @@
 fn main() {
-    let my_tup: (u8, char, &str) = (255, 'h', "Hello!");
-    let my_arr: [&str; 3] = [
-        "string1",
-        "second string",
-        "another string"
-    ];
-    let arr2 = ["string1", "string2"];
-    
-    println!("Tuple: {:?}", my_tup);
-    println!("Array: {:?}", my_arr);
-    println!("Array2: {:?}", arr2);
+    // pointers and references
+    let a = 65;
+    let b = &a;
+    let c = *b;
+
+    let d = &b; // &&a
+
+    println!("{} {} {} {}", a, b , c, d); // Rust automatically dereferences pointers
+
+    println!("{} {} {} {}", a, *b, c, **d); // Output will be same as above
 }
