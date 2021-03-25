@@ -7,7 +7,7 @@ fn main() {
     ];
     let arr2 = ["string1", "string2"];
     
-    println!("Tuple: ({}, {}, {})", my_tup.0, my_tup.1, my_tup.2);
-    println!("Array: [{}, {}, {})]", my_arr[0], my_arr[1], my_arr[2]);
-    println!("Array2: [{}, {}]", arr2[0], arr2[1]);
+    println!("Tuple: {:?}", my_tup);
+    println!("Array: {:?}", my_arr);
+    println!("Array2: {:?}", arr2);
 }
