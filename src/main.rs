@@ -1,9 +1,9 @@
 fn main() {
-    let x: u32 = 16;
-    let y: f32 = 12.4;
-    let a: bool = true;
-    let ch: char = '😺'; // char in rust is 4 bytes
-    let s: &str = "Hello, world! 😺";
+    let x = 10 + 6;
+    let y = 12.4;
+    let a = true;
+    let ch = '😺'; // char in rust is 4 bytes
+    let s = "Hello, world! 😺";
 
     println!("x: {}, y: {}", x , y);
     println!("a: {}", a);
