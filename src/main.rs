@@ -1,12 +1,13 @@
 fn main() {
-    // 2. while loop
-    
-    let mut i = 0;
-    let arr = [ 3, 4, 5 ,6 ];
+    // 3. For 
+    let arr = [ 2, 3, 5, 3 ];
 
-    while i < arr.len() {
+    for i in 0..arr.len() {
         println!("{}", arr[i]);
-        i+=1;
+    }
+
+    for a in &arr { // We don't need counter variable here
+        println!("{}", a);
     }
 }
 
