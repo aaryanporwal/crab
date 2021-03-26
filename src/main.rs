@@ -1,21 +1,12 @@
-fn main() 
-{
+fn main() {
+    // 2. while loop
     
-    // 1. loop
-    
-    // Values to variables can be assigned using loops ➰
-    
-    let mut counter = 0;
+    let mut i = 0;
+    let arr = [ 3, 4, 5 ,6 ];
 
-    let a = loop 
-    {
-        counter += 1;
-
-        if counter >= 10 
-        {
-            break counter * 2;
-        }
-    }; // loop needs to end with a semicolon
-    println!("counter: {}, a: {}", counter, a);
+    while i < arr.len() {
+        println!("{}", arr[i]);
+        i+=1;
+    }
 }
 
