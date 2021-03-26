@@ -1,13 +1,15 @@
 fn main() {
-    let a = 10;
-    let b = 12;
-
-    if a < b {
-        println!("a < b");
-    } else if b < a {
-        println!("a > b");
-    } else {
-        println!("a = b");
+    
+    // 1. loop
+    
+    let mut i=0;
+    loop {
+        println!("{}", i);
+        i += 1;
+        if i>=10 {
+            break
+        }
     }
+
 }
 
