@@ -1,13 +1,18 @@
+#[derive(Debug)]
+struct User {
+    username: String,
+    email: String,
+    logged_in_count: u64,
+    active: bool,
+}
+
 fn main() {
-    // 3. For 
-    let arr = [ 2, 3, 5, 3 ];
-
-    for i in 0..arr.len() {
-        println!("{}", arr[i]);
-    }
-
-    for a in &arr { // We don't need counter variable here
-        println!("{}", a);
-    }
+    let user = User{
+        username: String::from("Aaryan"),
+        email: String::from("abc@adcd.com"),
+        logged_in_count: 0,
+        active: true,
+    };
+    println!("{:?}", user);
 }
 
