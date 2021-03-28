@@ -1,19 +1,36 @@
-#[derive(Debug)] // For easily printing our struct
-struct Point(i32, i32, i32); // Structs without field names are possible!
-
-#[derive(Debug)] 
-struct Color(i32, i32, i32);
+// Methods and Associate functions in Rust
 
 #[derive(Debug)]
-struct What{} // Empty fields are possible too! // Notice no semicolon at end
+struct Rectangle {
+    length: u32,
+    width: u32,
+}
+
+impl Rectangle {
+    fn new(length: u32, width: u32) -> Rectangle {
+        Rectangle {
+            length,
+            width,
+        }
+    }
+
+    fn clone(&self) -> Rectangle { // &self is instance of our Rectangle
+        Rectangle{
+            ..*self
+        }
+    }
+
+    fn set_width(&mut self, width: u32) {
+        self.width = width;
+    }
+
+}
 
 fn main() {
-    let black = Color(0,0,0);
-    let zero = Point(1,1,1);
-    let ikr = What{};
+    let rect1 = Rectangle::new(10, 5); // Calling associative function
+    let mut rect2 = rect1.clone(); 
+    rect2.set_width(20);
 
-    println!("{:?}", black);
-    println!("{:?}", zero);
-    println!("{:?}", ikr);
-
+    println!("{:?}", rect1);
+    println!("{:?}", rect2);
 }
