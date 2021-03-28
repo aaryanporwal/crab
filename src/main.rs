@@ -1,29 +1,19 @@
 #[derive(Debug)] // For easily printing our struct
-struct User {
-    username: String,
-    email: String,
-    logged_in_count: u64,
-    active: bool,
-}
+struct Point(i32, i32, i32); // Structs without field names are possible!
 
-fn build_user(username: String, email: String) -> User {
-    User {
-        username: username,
-        email: email,
-        logged_in_count: 0,
-        active: true
-    }
-}
+#[derive(Debug)] 
+struct Color(i32, i32, i32);
+
+#[derive(Debug)]
+struct What{} // Empty fields are possible too! // Notice no semicolon at end
 
 fn main() {
-    let user = build_user(String::from("Aaryan"), String::from("aaryan@aaryan.com"));
-    let user2 = User {
-        username: String::from("kamiyaa"),
-        email: String::from("kamiyaa@aaa.com"),
-        ..user // copy all fields from user not initialized in user2     
-    };
+    let black = Color(0,0,0);
+    let zero = Point(1,1,1);
+    let ikr = What{};
 
-    println!("{:?}", user);
-    println!("{:?}", user2);
+    println!("{:?}", black);
+    println!("{:?}", zero);
+    println!("{:?}", ikr);
+
 }
-
